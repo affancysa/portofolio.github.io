@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/heroicons@2.0.13/20/solid.min.js"></script>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f6eee1;
+    }
+    .navbar {
+      background-color: #2b3e36;
+    }
+    .navbar-brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: #ffd700 !important;
+    }
+    section {
+        background-color: #f6eee1;
+    }
+    .section-title {
+      font-size: 3.5rem;
+      font-family: 'Playfair Display', serif;
+      text-align: center;
+      margin: 40px 0;
+      position: relative;
+      color: #344a35;
+    }
+    .section-title::after {
+      content: '';
+      display: block;
+      width: 50px;
+      height: 4px;
+      background-color: #ffd700;
+      margin: 10px auto 0;
+    }
+    .footer {
+      background-color: #2b3e36;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+    #about img {
+      width: 100%;
+      height: auto;
+      max-height: 1080px;
+    }
+    .card-body {
+      text-align: center;
+      padding: 20px;
+      gap: 20px;
+    }
+    .skills .card-body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+      padding: 20px;
+    }
+    .skills .card-body svg {
+      width: 40px;
+      height: 40px;
+    }
+    .skills .card {
+      border: none;
+      background: #fff;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+    .skills .card:hover {
+      transform: scale(1.05);
+    }
+    .education-card {
+      background-color: #f6eee1;
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .education-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+    }
+    .education-card .card-body {
+      text-align: center;
+      color: #e0e0e0;
+      padding: 20px;
+    }
+    .education-card .card-title {
+      font-size: 1.4rem;
+      color: black;
+      font-family: 'Playfair Display', serif;
+    }
+    .education-card .card-text {
+      font-size: 1rem;
+      color: black;
+    }
+    .education-icon {
+      font-size: 2rem;
+      color: #03dac6;
+      margin-bottom: 10px;
+    }
+    .education-timeline {
+      border-left: 3px solid black;
+      margin-top: 20px;
+      padding-left: 20px;
+    }
+  </style>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "url": "https://affancysa.github.io/portofolio.github.io/",
+          "name": "Affan Gunawan Portfolio",
+          "description": "Portofolio Affan Gunawan, seorang IT Engineer yang berbasis di Tangerang, Indonesia. Aktif dan berkecimoung di dubia Jaringan dan Pemograman",
+          "publisher": {
+            "@type": "Person",
+            "name": "Affan Gunawan",
+            "url": "https://affancysa.github.io/portofolio.github.io",
+            "sameAs": [
+              "https://linkedin.com/in/affan-gunawan",
+              "https://instagram.com/@affan_dsn"
+            ]
+          }
+        },
+        {
+          "@type": "EducationalOrganization",
+          "name": "Universitas Yatsi Madani",
+          "url": "https://universitasyatsimadani.ac.id",
+          "description": "Institusi pendidikan yang berfokus pada pengembangan teknologi dan ilmu pengetahuan.",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Jl. Pendidikan No.1",
+            "addressLocality": "Tangerang",
+            "addressRegion": "Banten",
+            "postalCode": "15111",
+            "addressCountry": "ID"
+          },
+          "sameAs": [
+            "https://facebook.com/universitasyatsimadani",
+            "https://twitter.com/universitasyatsimadani"
+          ]
+        },
+        {
+          "@type": "Person",
+          "name": "Affan Gunawan",
+          "url": "https://affancysa.github.io/portofolio.github.io",
+          "image": "https://affancysa.github.io/portofolio.github.io/Mamang Gaje Portofolio-02.jpg",
+          "jobTitle": "IT Engineer",
+          "worksFor": {
+            "@type": "Organization",
+            "name": "Universitas Yatsi Madani"
+          },
+          "sameAs": [
+            "https://linkedin.com/in/affan-gunawan",
+            "https://instagram.com/@affan_dsn",
+            "https://affancysa.github.io/portofolio.github.io"
+          ],
+          "alumniOf": {
+            "@type": "EducationalOrganization",
+            "name": "Universitas Yatsi Madani"
+          }
+        },
+        {
+          "@type": "LocalBusiness",
+          "name": "Universitas Yatsi Madani",
+          "url": "https://universitasyatsimadani.ac.id",
+          "image": "https://universitasyatsimadani.ac.id/logo.png",
+          "description": "Pusat pendidikan tinggi di Tangerang, berkomitmen pada pengembangan teknologi dan inovasi.",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Jl. Pendidikan No.1",
+            "addressLocality": "Tangerang",
+            "addressRegion": "Banten",
+            "postalCode": "15111",
+            "addressCountry": "ID"
+          },
+          "sameAs": [
+            "https://linkedin.com/company/universitasyatsimadani",
+            "https://instagram.com/universitasyatsimadani"
+          ],
+          "telephone": "+62 21 12345678"
+        }
+      ]
+    }
+    </script>    
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Affan Gunawan</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <img src="Untitled-2-01-01.jpg" alt="Hero Image" class="img-fluid">
+  </section>
+
+  <section id="about" class="about">
+    <h2 class="section-title">About</h2>
+    <img src="Mamang Gaje Portofolio-02.jpg" alt="About Image">
+  </section>
+
+  <section id="education" class="py-5 text-light" style="background-color: #344a35;">
+    <div class="container">
+      <h2 class="section-title" style="color: #f6eee1;">Pendidikan</h2>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3">
+          <div class="card education-card">
+            <div class="card-body">
+              <h5 class="card-title">2009-2015</h5>
+              <p class="card-text">SDN 6 Panjalu</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card education-card">
+            <div class="card-body">
+              <h5 class="card-title">2016-2018</h5>
+              <p class="card-text">SMPN 1 Panjalu</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card education-card">
+            <div class="card-body">
+              <h5 class="card-title">2019-2021</h5>
+              <p class="card-text">SMKS Plus YSB Suryalaya</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card education-card">
+            <div class="card-body">
+              <h5 class="card-title">2023-Sekarang</h5>
+              <p class="card-text">Universitas Yatsi Madani</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="skills py-5">
+    <h2 class="section-title">Technical Skills</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card h-100 text-center">
+          <div class="card-body">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9.53 16.122a3 3 0 0 0-5.78 1.128 2.25 2.25 0 0 1-2.4 2.245 4.5 4.5 0 0 0 8.4-2.245c0-.399-.078-.78-.22-1.128Zm0 0a15.998 15.998 0 0 0 3.388-1.62m-5.043-.025a15.994 15.994 0 0 1 1.622-3.395m3.42 3.42a15.995 15.995 0 0 0 4.764-4.648l3.876-5.814a1.151 1.151 0 0 0-1.597-1.597L14.146 6.32a15.996 15.996 0 0 0-4.649 4.763m3.42 3.42a6.776 6.776 0 0 0-3.42-3.42" >
+            </svg>
+            <p>Graphic Designer</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 text-center">
+          <div class="card-body">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z" />
+            </svg>
+            <p>IT Engineer</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 text-center">
+          <div class="card-body">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5" />
+            </svg>
+            <p>Programmer</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2024 Affan Gunawan</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
